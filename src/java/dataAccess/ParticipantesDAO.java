@@ -52,7 +52,7 @@ private PreparedStatement statement;
 					while (results.next()) {
                         //aqui se agregan los atributos de la base de datos
                         Participantes  participantes = new Participantes();
-			participantes.setidMatricula(results.getString("idMatricula"));
+			participantes.setIdMatricula(results.getString("idMatricula"));
                         participantes.setNombre(results.getString("Nombre"));
 			participantes.setApellidoP(results.getString("ApellidoP"));
 			participantes.setApellidoM(results.getString("ApellidoM"));
@@ -76,21 +76,20 @@ private PreparedStatement statement;
 			return participantesList;
 	}
         
-	public void addGuard (Guard guard){
+	public void addParticipantes (Participantes participantes){
 		try{
 			statement = 
-			connection.prepareStatement("INSERT INTO guardia VALUES(?,?,?,?,?,?,?,?,?,?)"); 
+			connection.prepareStatement("INSERT INTO participantes VALUES(?,?,?,?,?,?,?,?,?,?)"); 
 				synchronized(statement){
-                                        statement.setString(1,guard.getIdGuard());
-					statement.setString(2,guard.getNombre());
-					statement.setString(3,guard.getApellidoP());
-					statement.setString(4,guard.getApellidoM());
-					statement.setString(5,guard.getCurp());
-                                        statement.setString(6,guard.getNss());
-                                        statement.setString(7,guard.getEdad());
-                                        statement.setString(8,guard.getComplexion());
-                                        statement.setString(9,guard.getGenero());
-                                        statement.setString(10,guard.getNivelEstudio());
+                                        statement.setString(1,participantes.getIdMatricula());
+					statement.setString(2,participantes.getNombre());
+					statement.setString(3,participantes.getApellidoP());
+					statement.setString(4,participantes.getApellidoM());
+					statement.setString(5,participantes.getCorreo());
+                                        statement.setString(6,participantes.getEdad());
+                                        statement.setString(7,participantes.getGenero());
+                                        statement.setString(8,participantes.getTelefono());
+                                        statement.setString(10,participantes.getNivelEstudio());
 					statement.executeUpdate();
 					}
 					statement.close();
