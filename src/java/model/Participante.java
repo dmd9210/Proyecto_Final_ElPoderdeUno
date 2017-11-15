@@ -9,10 +9,27 @@ package model;
  *
  * @author Diego
  */
-public class Participantes {
+public class Participante {
     
     private String idMatricula,Nombre,ApellidoP,ApellidoM,Correo,Edad,Genero,Telefono,NivelEstudio;
 
+    
+    public Participante() {
+
+}
+
+    public Participante(String idMatricula, String Nombre, String ApelliodP,String ApellidoM,String Correo,String Edad,String Genero,String Telefono,String NivelEstudio){
+    
+        this.idMatricula=idMatricula;
+        this.Nombre=Nombre;
+        this.ApellidoP=ApellidoP;
+        this.ApellidoM=ApellidoM;
+        this.Correo=Correo;
+        this.Edad=Edad;
+        this.Genero=Genero;
+        this.Telefono=Telefono;
+        this.NivelEstudio=NivelEstudio;
+    }
     public String getIdMatricula() {
         return idMatricula;
     }

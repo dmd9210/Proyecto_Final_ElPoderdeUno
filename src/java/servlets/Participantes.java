@@ -10,7 +10,7 @@ import javax.servlet.http.*;
 import dataAccess.ConnectionDB;
 import dataAccess.ParticipantesDAO;
 
-import model.Participantes;
+import model.Participante;
 
 @WebServlet("/participantes")
 public class Participantes extends HttpServlet {
@@ -38,7 +38,7 @@ public class Participantes extends HttpServlet {
     Connection connection = connectionDB.getConnectionDB();
     
     ParticipantesDAO participantesDAO = new ParticipantesDAO(connection);
-    participantesDAO.addParticipante(participante);
+    participantesDAO.addParticipantes(participante);
     
     
     

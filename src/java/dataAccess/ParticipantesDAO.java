@@ -11,7 +11,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
-import model.Participantes;
+import model.Participante;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -41,8 +41,8 @@ private PreparedStatement statement;
 		this.connection = connection;
 	}
 
-	public ArrayList<Participantes> getparticipantesList() {
-		ArrayList<Participantes> participantesList = new ArrayList<Participantes>();
+	public ArrayList<Participante> getparticipantesList() {
+		ArrayList<Participante> participantesList = new ArrayList<Participante>();
 		try {
 			statement = connection.prepareStatement(" SELECT * FROM participantes");
 				//obtain list of guard 
@@ -51,7 +51,7 @@ private PreparedStatement statement;
 					//get rows data
 					while (results.next()) {
                         //aqui se agregan los atributos de la base de datos
-                        Participantes  participantes = new Participantes();
+                        Participante  participantes = new Participante();
 			participantes.setIdMatricula(results.getString("idMatricula"));
                         participantes.setNombre(results.getString("Nombre"));
 			participantes.setApellidoP(results.getString("ApellidoP"));
@@ -76,7 +76,7 @@ private PreparedStatement statement;
 			return participantesList;
 	}
         
-	public void addParticipantes (Participantes participantes){
+	public void addParticipantes (Participante participantes){
 		try{
 			statement = 
 			connection.prepareStatement("INSERT INTO participantes VALUES(?,?,?,?,?,?,?,?,?,?)"); 
@@ -101,7 +101,7 @@ private PreparedStatement statement;
 						}
 	}
         
-        public void updateGuard (Guard update){
+        public void updateParticipantes (Participante update){
 		try{
 			statement = 
 			connection.prepareStatement("UPDATE guardiastec.guardia SET Nombre=?,ApellidoP=?,"
@@ -111,13 +111,12 @@ private PreparedStatement statement;
 					statement.setString(1,update.getNombre());
 					statement.setString(2,update.getApellidoP());
 					statement.setString(3,update.getApellidoM());
-					statement.setString(4,update.getCurp());
-                                        statement.setString(5,update.getNss());
-                                        statement.setString(6,update.getEdad());
-                                        statement.setString(7,update.getComplexion());
-                                        statement.setString(8,update.getGenero());
+					statement.setString(4,update.getCorreo());
+                                        statement.setString(5,update.getEdad());
+                                        statement.setString(6,update.getGenero());
+                                        statement.setString(7,update.getTelefono());
                                         statement.setString(9,update.getNivelEstudio());
-                                        statement.setString(10,update.getIdGuard());
+                                        statement.setString(10,update.getIdMatricula());
 					statement.executeUpdate();
 					}
 					statement.close();
@@ -129,7 +128,5 @@ private PreparedStatement statement;
 						}
 	}
 
-
-}
 
 }
