@@ -44,7 +44,7 @@ private PreparedStatement statement;
 	public ArrayList<Participante> getparticipantesList() {
 		ArrayList<Participante> participantesList = new ArrayList<Participante>();
 		try {
-			statement = connection.prepareStatement(" SELECT * FROM participantes");
+			statement = connection.prepareStatement(" SELECT * FROM participante");
 				//obtain list of guard 
 			synchronized (statement) {
 				ResultSet results = statement.executeQuery();
@@ -79,7 +79,7 @@ private PreparedStatement statement;
 	public void addParticipantes (Participante participantes){
 		try{
 			statement = 
-			connection.prepareStatement("INSERT INTO participantes VALUES(?,?,?,?,?,?,?,?,?,?)"); 
+			connection.prepareStatement("INSERT INTO participante VALUES(?,?,?,?,?,?,?,?,?)"); 
 				synchronized(statement){
                                         statement.setString(1,participantes.getIdMatricula());
 					statement.setString(2,participantes.getNombre());
@@ -89,7 +89,7 @@ private PreparedStatement statement;
                                         statement.setString(6,participantes.getEdad());
                                         statement.setString(7,participantes.getGenero());
                                         statement.setString(8,participantes.getTelefono());
-                                        statement.setString(10,participantes.getNivelEstudio());
+                                        statement.setString(9,participantes.getNivelEstudio());
 					statement.executeUpdate();
 					}
 					statement.close();
@@ -104,7 +104,7 @@ private PreparedStatement statement;
         public void updateParticipantes (Participante update){
 		try{
 			statement = 
-			connection.prepareStatement("UPDATE guardiastec.guardia SET Nombre=?,ApellidoP=?,"
+			connection.prepareStatement("UPDATE elpoderdeuno.participante SET Nombre=?,ApellidoP=?,"
                                 + "ApellidoM=?,CURP=?,NSS=?,Edad=?,"
                                 + "Complexion=?,Genero=?,NivelEstudio=? WHERE IdGuard=?"); 
 				synchronized(statement){

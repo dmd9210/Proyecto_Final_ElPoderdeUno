@@ -15,7 +15,7 @@ public class ConnectionDB {
      try {
     
     Class.forName("com.mysql.jdbc.Driver");
-    String dbName = "guardiastec";
+    String dbName = "elpoderdeuno";
     String host = "localhost";
     String url = "jdbc:mysql://"+host+":3306/"+dbName;
     String user = "root";

@@ -18,7 +18,7 @@ public class Participante {
 
 }
 
-    public Participante(String idMatricula, String Nombre, String ApelliodP,String ApellidoM,String Correo,String Edad,String Genero,String Telefono,String NivelEstudio){
+    public Participante(String idMatricula, String Nombre, String ApellidoP,String ApellidoM,String Correo,String Edad,String Genero,String Telefono,String NivelEstudio){
     
         this.idMatricula=idMatricula;
         this.Nombre=Nombre;
