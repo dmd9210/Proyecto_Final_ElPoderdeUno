@@ -14,6 +14,6 @@
         //out.println("<a href='logout.jsp'>Log out</a>");
         response.sendRedirect("index.jsp");
     } else {
-        //out.println("Invalid password <a href='index1.jsp'>try again</a>");
+        out.println("Invalid password <a href='index1.jsp'>try again</a>");
     }
 %>
