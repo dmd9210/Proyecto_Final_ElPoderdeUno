@@ -115,8 +115,8 @@ private PreparedStatement statement;
                                         statement.setString(5,update.getEdad());
                                         statement.setString(6,update.getGenero());
                                         statement.setString(7,update.getTelefono());
-                                        statement.setString(9,update.getNivelEstudio());
-                                        statement.setString(10,update.getIdMatricula());
+                                        statement.setString(8,update.getNivelEstudio());
+                                        statement.setString(9,update.getIdMatricula());
 					statement.executeUpdate();
 					}
 					statement.close();
