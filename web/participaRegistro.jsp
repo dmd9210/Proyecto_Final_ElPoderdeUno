@@ -21,7 +21,7 @@
 
         <jsp:include page="banner.jsp" flush="true"/>
         <h1>Participa Registro</h1>
-        Then, click on the Submit button.</p>
+       </p>
     <form action="participantes" method="get">
         <table>
             <tr>
