@@ -52,8 +52,8 @@
                 <td>Genero:</td>
                         <td><select>
                                 <option disabled selected> Seleccion su Genero</option>
-                                <option>Masculino</option>
-                                <option>Femenino</option>
+                                <option value="Masculino">Masculino</option>
+                                <option value="Femenino">Femenino</option>
                             </select></td>
             </tr>
         <tr>
@@ -64,10 +64,10 @@
                  <td>Nivel de Estudios:</td>
                         <td><select>
                                 <option disabled selected> Selecciona tu Nivel de Estudios</option>
-                                <option>Bachillerato</option>
-                                <option>Licenciatura</option>
-                                <option>Maestría</option>
-                                <option>Doctorado</option>
+                                <option value="Bachillerato">Bachillerato</option>
+                                <option value="Licenciatura">Licenciatura</option>
+                                <option value="Maestría">Maestría</option>
+                                <option value="Doctorado">Doctorado</option>
                             </select></td>
             </tr>
             <tr>
