@@ -77,7 +77,7 @@
             </tr>
         </table>
         <h4>
-            <a href="index.html">Return to Main page</a>
+            <a href="index.html">Regresar a Página Principal</a>
         </h4>
     </form>
 </body>
