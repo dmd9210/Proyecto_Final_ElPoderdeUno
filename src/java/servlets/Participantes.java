@@ -15,7 +15,7 @@ import model.Participante;
 @WebServlet("/participantes")
 public class Participantes extends HttpServlet {
   @Override
-  public void doGet(HttpServletRequest request,
+  public void doPost(HttpServletRequest request,
                     HttpServletResponse response)
       throws ServletException, IOException {
 	  
@@ -55,10 +55,11 @@ public class Participantes extends HttpServlet {
   }
   
   @Override
-  public void doPost(HttpServletRequest request,
+  public void doGet(HttpServletRequest request,
           HttpServletResponse response) 
         		  throws ServletException, IOException  {
 	  doGet(request, response);
   }
- 
+ //
 }
+
