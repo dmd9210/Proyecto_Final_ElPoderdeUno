@@ -44,7 +44,7 @@
             </thead>
 
             <tbody>                                                                          
-                <c:forEach var="participantesElement" items="${participantesList}" >                                      
+                <c:forEach var="participantesElement" items="${ParticipantesList}" >                                      
                     <tr>
                         <td>${participantesElement.idMatricula}</td>
                         <td>${participantesElement.Nombre}</td>    
