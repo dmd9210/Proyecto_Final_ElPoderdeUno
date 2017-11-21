@@ -12,6 +12,7 @@ package model;
 public class Participante {
     
     private String idMatricula,Nombre,ApellidoP,ApellidoM,Correo,Edad,Genero,Telefono,NivelEstudio;
+   
 
     
     public Participante() {
