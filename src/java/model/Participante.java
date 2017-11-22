@@ -35,35 +35,35 @@ public class Participante {
         return idMatricula;
     }
 
-    public String getnombre() {
+    public String getNombre() {
         return nombre;
     }
 
-    public String getapellidoP() {
+    public String getApellidoP() {
         return apellidoP;
     }
 
-    public String getapellidoM() {
+    public String getApellidoM() {
         return apellidoM;
     }
 
-    public String getcorreo() {
+    public String getCorreo() {
         return correo;
     }
 
-    public String getedad() {
+    public String getEdad() {
         return edad;
     }
 
-    public String getgenero() {
+    public String getGenero() {
         return genero;
     }
 
-    public String gettelefono() {
+    public String getTelefono() {
         return telefono;
     }
 
-    public String getnivelEstudio() {
+    public String getNivelEstudio() {
         return nivelEstudio;
     }
 
@@ -71,35 +71,35 @@ public class Participante {
         this.idMatricula = idMatricula;
     }
 
-    public void setnombre(String nombre) {
+    public void setNombre(String nombre) {
         this.nombre = nombre;
     }
 
-    public void setapellidoP(String apellidoP) {
+    public void setApellidoP(String apellidoP) {
         this.apellidoP = apellidoP;
     }
 
-    public void setapellidoM(String apellidoM) {
+    public void setApellidoM(String apellidoM) {
         this.apellidoM = apellidoM;
     }
 
-    public void setcorreo(String correo) {
+    public void setCorreo(String correo) {
         this.correo = correo;
     }
 
-    public void setedad(String edad) {
+    public void setEdad(String edad) {
         this.edad = edad;
     }
 
-    public void setgenero(String genero) {
+    public void setGenero(String genero) {
         this.genero = genero;
     }
 
-    public void settelefono(String telefono) {
+    public void setTelefono(String telefono) {
         this.telefono = telefono;
     }
 
-    public void setnivelEstudio(String nivelEstudio) {
+    public void setNivelEstudio(String nivelEstudio) {
         this.nivelEstudio = nivelEstudio;
     }
 
