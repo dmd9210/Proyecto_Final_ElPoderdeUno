@@ -52,7 +52,7 @@ private PreparedStatement statement;
 					while (results.next()) {
                         //aqui se agregan los atributos de la base de datos
                         Participante  participantes = new Participante();
-			participantes.setIdMatricula(results.getString("idMatricula"));
+			participantes.setidMatricula(results.getString("idMatricula"));
                         participantes.setnombre(results.getString("Nombre"));
 			participantes.setapellidoP(results.getString("ApellidoP"));
 			participantes.setapellidoM(results.getString("ApellidoM"));
@@ -81,7 +81,7 @@ private PreparedStatement statement;
 			statement = 
 			connection.prepareStatement("INSERT INTO participante VALUES(?,?,?,?,?,?,?,?,?)"); 
 				synchronized(statement){
-                                        statement.setString(1,participantes.getIdMatricula());
+                                        statement.setString(1,participantes.getidMatricula());
 					statement.setString(2,participantes.getnombre());
 					statement.setString(3,participantes.getapellidoP());
 					statement.setString(4,participantes.getapellidoM());
@@ -116,7 +116,7 @@ private PreparedStatement statement;
                                         statement.setString(6,update.getgenero());
                                         statement.setString(7,update.gettelefono());
                                         statement.setString(8,update.getnivelEstudio());
-                                        statement.setString(9,update.getIdMatricula());
+                                        statement.setString(9,update.getidMatricula());
 					statement.executeUpdate();
 					}
 					statement.close();

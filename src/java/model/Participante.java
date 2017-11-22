@@ -31,7 +31,7 @@ public class Participante {
         this.telefono=telefono;
         this.nivelEstudio=nivelEstudio;
     }
-    public String getIdMatricula() {
+    public String getidMatricula() {
         return idMatricula;
     }
 
@@ -67,7 +67,7 @@ public class Participante {
         return nivelEstudio;
     }
 
-    public void setIdMatricula(String idMatricula) {
+    public void setidMatricula(String idMatricula) {
         this.idMatricula = idMatricula;
     }
 
