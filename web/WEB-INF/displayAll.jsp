@@ -40,6 +40,7 @@
                     <th style = "width:100px;">Genero</th>
                     <th style = "width: 300px;">Teléfono</th>
                     <th style = "width:100px;">Nivel de Estudio</th>
+                    <th style = "width:100px;">Proyecto</th>
                 </tr>
             </thead>
 
@@ -55,6 +56,7 @@
                         <td>${participantesElement.Genero}</td>
                         <td>${participantesElement.Telefono}</td>
                         <td>${participantesElement.NivelEstudio}</td>
+                        <td>${participantesElement.Proyecto}</td>
                         <td><li><a href=""> Actualizar Participantes</a></li></td>
         </tr>
     </c:forEach>  

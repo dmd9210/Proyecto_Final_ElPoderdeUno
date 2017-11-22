@@ -11,7 +11,7 @@ package model;
  */
 public class Participante {
     
-    private String idMatricula,nombre,apellidoP,apellidoM,correo,edad,genero,telefono,nivelEstudio;
+    private String idMatricula,nombre,apellidoP,apellidoM,correo,edad,genero,telefono,nivelEstudio,proyecto;
    
 
     
@@ -19,7 +19,7 @@ public class Participante {
 
 }
 
-    public Participante(String idMatricula, String nombre, String apellidoP,String apellidoM,String correo,String edad,String genero,String telefono,String nivelEstudio){
+    public Participante(String idMatricula, String nombre, String apellidoP,String apellidoM,String correo,String edad,String genero,String telefono,String nivelEstudio,String proyecto){
     
         this.idMatricula=idMatricula;
         this.nombre=nombre;
@@ -30,6 +30,7 @@ public class Participante {
         this.genero=genero;
         this.telefono=telefono;
         this.nivelEstudio=nivelEstudio;
+        this.proyecto=proyecto;
     }
     public String getidMatricula() {
         return idMatricula;
@@ -66,6 +67,10 @@ public class Participante {
     public String getNivelEstudio() {
         return nivelEstudio;
     }
+    
+    public String getProyecto(){
+        return proyecto;
+    }
 
     public void setidMatricula(String idMatricula) {
         this.idMatricula = idMatricula;
@@ -101,6 +106,11 @@ public class Participante {
 
     public void setNivelEstudio(String nivelEstudio) {
         this.nivelEstudio = nivelEstudio;
+    }
+    
+    public void setProyecto(String proyecto){
+    
+        this.proyecto = proyecto;
     }
 
     

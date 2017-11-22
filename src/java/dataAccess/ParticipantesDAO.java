@@ -53,14 +53,15 @@ private PreparedStatement statement;
                         //aqui se agregan los atributos de la base de datos
                         Participante  participante = new Participante();
 			participante.setidMatricula(results.getString("idMatricula"));
-                        participante.setNombre(results.getString("nombre"));
-			participante.setApellidoP(results.getString("apellidoP"));
-			participante.setApellidoM(results.getString("apellidoM"));
-			participante.setCorreo(results.getString("correo"));
-                        participante.setEdad(results.getString("edad"));
-                        participante.setGenero(results.getString("genero"));
-                        participante.setTelefono(results.getString("telefono"));
-                        participante.setNivelEstudio(results.getString("nivelEstudio"));
+                        participante.setNombre(results.getString("Nombre"));
+			participante.setApellidoP(results.getString("ApellidoP"));
+			participante.setApellidoM(results.getString("ApellidoM"));
+			participante.setCorreo(results.getString("Correo"));
+                        participante.setEdad(results.getString("Edad"));
+                        participante.setGenero(results.getString("Genero"));
+                        participante.setTelefono(results.getString("Telefono"));
+                        participante.setNivelEstudio(results.getString("NivelEstudio"));
+                        participante.setProyecto(results.getString("Proyecto"));
                         participantesList.add(participante);
 			}
 
@@ -79,7 +80,7 @@ private PreparedStatement statement;
 	public void addParticipantes (Participante participante){
 		try{
 			statement = 
-			connection.prepareStatement("INSERT INTO participante VALUES(?,?,?,?,?,?,?,?,?)"); 
+			connection.prepareStatement("INSERT INTO participante VALUES(?,?,?,?,?,?,?,?,?,?)"); 
 				synchronized(statement){
                                         statement.setString(1,participante.getidMatricula());
 					statement.setString(2,participante.getNombre());
@@ -90,7 +91,8 @@ private PreparedStatement statement;
                                         statement.setString(7,participante.getGenero());
                                         statement.setString(8,participante.getTelefono());
                                         statement.setString(9,participante.getNivelEstudio());
-					statement.executeUpdate();
+					statement.setString(10,participante.getProyecto());
+                                        statement.executeUpdate();
 					}
 					statement.close();
 					} catch(SQLException sqle){
@@ -106,7 +108,7 @@ private PreparedStatement statement;
 			statement = 
 			connection.prepareStatement("UPDATE elpoderdeuno.participante SET Nombre=?,ApellidoP=?,"
                                 + "ApellidoM=?,Correo=?,Edad=?,Genero=?,"
-                                + "Telefono=?,NivelEstudio=? WHERE IdMatricula=?"); 
+                                + "Telefono=?,NivelEstudio=?,Proyecto=?, WHERE IdMatricula=?"); 
 				synchronized(statement){
 					statement.setString(1,update.getNombre());
 					statement.setString(2,update.getApellidoP());
@@ -116,7 +118,8 @@ private PreparedStatement statement;
                                         statement.setString(6,update.getGenero());
                                         statement.setString(7,update.getTelefono());
                                         statement.setString(8,update.getNivelEstudio());
-                                        statement.setString(9,update.getidMatricula());
+                                        statement.setString(9,update.getProyecto());
+                                        statement.setString(10,update.getidMatricula());
 					statement.executeUpdate();
 					}
 					statement.close();

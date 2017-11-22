@@ -29,9 +29,10 @@ public class Participantes extends HttpServlet {
     String Genero = request.getParameter("Genero");
     String Telefono = request.getParameter("Telefono");
     String NivelEstudio = request.getParameter("NivelEstudio");
+    String Proyecto = request.getParameter("Proyecto");
     
     //Crear instancia
-    Participante participante = new Participante(idMatricula,Nombre, ApellidoP, ApellidoM, Correo, Edad, Genero, Telefono, NivelEstudio);
+    Participante participante = new Participante(idMatricula,Nombre, ApellidoP, ApellidoM, Correo, Edad, Genero, Telefono, NivelEstudio,Proyecto);
     
     //Guardar instancia en base de datos
     ConnectionDB connectionDB = new ConnectionDB();
