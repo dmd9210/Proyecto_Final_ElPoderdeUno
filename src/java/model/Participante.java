@@ -11,7 +11,7 @@ package model;
  */
 public class Participante {
     
-    private String idMatricula,Nombre,ApellidoP,ApellidoM,Correo,Edad,Genero,Telefono,NivelEstudio;
+    private String idMatricula,nombre,apellidoP,apellidoM,correo,edad,genero,telefono,nivelEstudio;
    
 
     
@@ -19,88 +19,88 @@ public class Participante {
 
 }
 
-    public Participante(String idMatricula, String Nombre, String ApellidoP,String ApellidoM,String Correo,String Edad,String Genero,String Telefono,String NivelEstudio){
+    public Participante(String idMatricula, String nombre, String apellidoP,String apellidoM,String correo,String edad,String genero,String telefono,String nivelEstudio){
     
         this.idMatricula=idMatricula;
-        this.Nombre=Nombre;
-        this.ApellidoP=ApellidoP;
-        this.ApellidoM=ApellidoM;
-        this.Correo=Correo;
-        this.Edad=Edad;
-        this.Genero=Genero;
-        this.Telefono=Telefono;
-        this.NivelEstudio=NivelEstudio;
+        this.nombre=nombre;
+        this.apellidoP=apellidoP;
+        this.apellidoM=apellidoM;
+        this.correo=correo;
+        this.edad=edad;
+        this.genero=genero;
+        this.telefono=telefono;
+        this.nivelEstudio=nivelEstudio;
     }
     public String getIdMatricula() {
         return idMatricula;
     }
 
-    public String getNombre() {
-        return Nombre;
+    public String getnombre() {
+        return nombre;
     }
 
-    public String getApellidoP() {
-        return ApellidoP;
+    public String getapellidoP() {
+        return apellidoP;
     }
 
-    public String getApellidoM() {
-        return ApellidoM;
+    public String getapellidoM() {
+        return apellidoM;
     }
 
-    public String getCorreo() {
-        return Correo;
+    public String getcorreo() {
+        return correo;
     }
 
-    public String getEdad() {
-        return Edad;
+    public String getedad() {
+        return edad;
     }
 
-    public String getGenero() {
-        return Genero;
+    public String getgenero() {
+        return genero;
     }
 
-    public String getTelefono() {
-        return Telefono;
+    public String gettelefono() {
+        return telefono;
     }
 
-    public String getNivelEstudio() {
-        return NivelEstudio;
+    public String getnivelEstudio() {
+        return nivelEstudio;
     }
 
     public void setIdMatricula(String idMatricula) {
         this.idMatricula = idMatricula;
     }
 
-    public void setNombre(String Nombre) {
-        this.Nombre = Nombre;
+    public void setnombre(String nombre) {
+        this.nombre = nombre;
     }
 
-    public void setApellidoP(String ApellidoP) {
-        this.ApellidoP = ApellidoP;
+    public void setapellidoP(String apellidoP) {
+        this.apellidoP = apellidoP;
     }
 
-    public void setApellidoM(String ApellidoM) {
-        this.ApellidoM = ApellidoM;
+    public void setapellidoM(String apellidoM) {
+        this.apellidoM = apellidoM;
     }
 
-    public void setCorreo(String Correo) {
-        this.Correo = Correo;
+    public void setcorreo(String correo) {
+        this.correo = correo;
     }
 
-    public void setEdad(String Edad) {
-        this.Edad = Edad;
+    public void setedad(String edad) {
+        this.edad = edad;
     }
 
-    public void setGenero(String Genero) {
-        this.Genero = Genero;
+    public void setgenero(String genero) {
+        this.genero = genero;
     }
 
-    public void setTelefono(String Telefono) {
-        this.Telefono = Telefono;
+    public void settelefono(String telefono) {
+        this.telefono = telefono;
     }
 
-    public void setNivelEstudio(String NivelEstudio) {
-        this.NivelEstudio = NivelEstudio;
+    public void setnivelEstudio(String nivelEstudio) {
+        this.nivelEstudio = nivelEstudio;
     }
 
     
