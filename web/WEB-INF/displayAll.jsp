@@ -57,7 +57,7 @@
                         <td>${participantesElement.telefono}</td>
                         <td>${participantesElement.nivelEstudio}</td>
                         <td>${participantesElement.proyecto}</td>
-                        <td><li><a href="updateParticipante"> Actualizar Participantes</a></li></td>
+                       <td><li><a href="/Proyecto_Final_ElPoderdeUno/updateParticipante?idMatricula=${participantesElement.idMatricula}"> Actualizar</a></li></td>
         </tr>
     </c:forEach>  
 </tbody>
