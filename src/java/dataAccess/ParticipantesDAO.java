@@ -108,7 +108,7 @@ private PreparedStatement statement;
 			statement = 
 			connection.prepareStatement("UPDATE elpoderdeuno.participante SET Nombre=?,ApellidoP=?,"
                                 + "ApellidoM=?,Correo=?,Edad=?,Genero=?,"
-                                + "Telefono=?,NivelEstudio=?,Proyecto=?, WHERE IdMatricula=?"); 
+                                + "Telefono=?,NivelEstudio=?,Proyecto=?, WHERE IdMatricula=A01232143"); 
 				synchronized(statement){
 					statement.setString(1,update.getNombre());
 					statement.setString(2,update.getApellidoP());

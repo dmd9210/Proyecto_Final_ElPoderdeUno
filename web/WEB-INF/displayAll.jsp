@@ -57,7 +57,7 @@
                         <td>${participantesElement.telefono}</td>
                         <td>${participantesElement.nivelEstudio}</td>
                         <td>${participantesElement.proyecto}</td>
-                        <td><li><a href=""> Actualizar Participantes</a></li></td>
+                        <td><li><a href="participaUpdate.html"> Actualizar Participantes</a></li></td>
         </tr>
     </c:forEach>  
 </tbody>
