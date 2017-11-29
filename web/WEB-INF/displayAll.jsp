@@ -48,15 +48,15 @@
                 <c:forEach var="participantesElement" items="${ParticipantesList}" >                                      
                     <tr>
                         <td>${participantesElement.idMatricula}</td>
-                        <td>${participantesElement.Nombre}</td>    
-                        <td>${participantesElement.ApellidoP}</td>  
-                        <td>${participantesElement.ApellidoM}</td>
-                        <td>${participantesElement.Correo}</td>
-                        <td>${participantesElement.Edad}</td>
-                        <td>${participantesElement.Genero}</td>
-                        <td>${participantesElement.Telefono}</td>
-                        <td>${participantesElement.NivelEstudio}</td>
-                        <td>${participantesElement.Proyecto}</td>
+                        <td>${participantesElement.nombre}</td>    
+                        <td>${participantesElement.apellidoP}</td>  
+                        <td>${participantesElement.apellidoM}</td>
+                        <td>${participantesElement.correo}</td>
+                        <td>${participantesElement.edad}</td>
+                        <td>${participantesElement.genero}</td>
+                        <td>${participantesElement.telefono}</td>
+                        <td>${participantesElement.nivelEstudio}</td>
+                        <td>${participantesElement.proyecto}</td>
                         <td><li><a href=""> Actualizar Participantes</a></li></td>
         </tr>
     </c:forEach>  

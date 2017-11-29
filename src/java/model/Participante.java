@@ -72,7 +72,7 @@ public class Participante {
         return proyecto;
     }
 
-    public void setidMatricula(String idMatricula) {
+    public void setIdMatricula(String idMatricula) {
         this.idMatricula = idMatricula;
     }
 

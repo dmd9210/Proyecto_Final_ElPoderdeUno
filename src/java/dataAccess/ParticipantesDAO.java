@@ -52,7 +52,7 @@ private PreparedStatement statement;
 					while (results.next()) {
                         //aqui se agregan los atributos de la base de datos
                         Participante  participante = new Participante();
-			participante.setidMatricula(results.getString("idMatricula"));
+			participante.setIdMatricula(results.getString("idMatricula"));
                         participante.setNombre(results.getString("Nombre"));
 			participante.setApellidoP(results.getString("ApellidoP"));
 			participante.setApellidoM(results.getString("ApellidoM"));
