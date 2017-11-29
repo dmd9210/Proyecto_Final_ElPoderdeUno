@@ -46,16 +46,7 @@ public class UpdateParticipante extends HttpServlet{
 		Connection connection = 
 		connectionDB.getConnectionDB();
 
-		ParticipantesDAO participantesDAO = new ParticipantesDAO(connection);
-		ArrayList<Participante> participantesList = participantesDAO.getparticipantesList();
-
-		//guardar instancia
-		request.setAttribute("ParticipantesList", participantesList);
-
-		//Mandar llamar a la pagina
-		String address = "/WEB-INF/participaUpdate.html";
-		RequestDispatcher dispatcher = request.getRequestDispatcher(address);
-		dispatcher.forward(request,response);
+		
 	}
 	public void doPost(HttpServletRequest request,
 		HttpServletResponse response)
