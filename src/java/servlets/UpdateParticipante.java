@@ -39,6 +39,7 @@ public class UpdateParticipante extends HttpServlet{
 	throws ServletException, IOException {
             response.setCharacterEncoding("utf-8");
 		
+               
                String idMatricula=request.getParameter("idMatricula");
                
                 //buscar usuario en base de datos
@@ -47,6 +48,11 @@ public class UpdateParticipante extends HttpServlet{
 		connectionDB.getConnectionDB();
 
 		
+
+		//Mandar llamar a la pagina
+		String address = "/WEB-INF/participaUpdate.html";
+		RequestDispatcher dispatcher = request.getRequestDispatcher(address);
+		dispatcher.forward(request,response);
 	}
 	public void doPost(HttpServletRequest request,
 		HttpServletResponse response)
