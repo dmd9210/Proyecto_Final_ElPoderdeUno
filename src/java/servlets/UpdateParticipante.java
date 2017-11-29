@@ -39,7 +39,6 @@ public class UpdateParticipante extends HttpServlet{
 	throws ServletException, IOException {
             response.setCharacterEncoding("utf-8");
 		
-               request.getParameter('idMatricula');
                String idMatricula=request.getParameter("idMatricula");
                
                 //buscar usuario en base de datos
