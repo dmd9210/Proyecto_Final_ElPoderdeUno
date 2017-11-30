@@ -51,7 +51,7 @@ public class DisplayAllParticipante extends HttpServlet{
 		request.setAttribute("ParticipantesList", participantesList);
 
 		//Mandar llamar a la pagina
-		String address = "/WEB-INF/displayAll.jsp";
+		String address = "displayAllParticipante";
 		RequestDispatcher dispatcher = request.getRequestDispatcher(address);
 		dispatcher.forward(request,response);
 	}

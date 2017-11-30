@@ -46,6 +46,11 @@ public class DeleteParticipante extends HttpServlet {
 
         participantesDAO.deleteParticipante(idMatricula);
 
+        String address = "displayAllParticipante";
+        RequestDispatcher dispatcher
+                = request.getRequestDispatcher(address);
+        dispatcher.forward(request, response);
+        
     }
 
     public void doPost(HttpServletRequest request,
