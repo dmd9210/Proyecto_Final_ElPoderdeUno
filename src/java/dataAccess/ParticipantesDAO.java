@@ -103,7 +103,7 @@ public class ParticipantesDAO {
             statement
                     = connection.prepareStatement("UPDATE elpoderdeuno.participante SET Nombre=?,ApellidoP=?,"
                             + "ApellidoM=?,Correo=?,Edad=?,Genero=?,"
-                            + "Telefono=?,NivelEstudio=?,Proyecto=?, WHERE IdMatricula=?");
+                            + "Telefono=?,NivelEstudio=?,Proyecto=? WHERE IdMatricula=?");
             synchronized (statement) {
                 statement.setString(1, update.getNombre());
                 statement.setString(2, update.getApellidoP());
