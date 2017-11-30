@@ -47,6 +47,7 @@ public class DisplayAllParticipante extends HttpServlet{
 		ArrayList<Participante> participantesList = participantesDAO.getparticipantesList();
 
 		//guardar instancia
+
 		request.setAttribute("ParticipantesList", participantesList);
 
 		//Mandar llamar a la pagina

@@ -217,8 +217,9 @@ JotForm.paymentExtrasOnTheFly([null,null,null,null,null,null,null,null,null,{"na
 </script>
 </head>
 <body>
-<form class="jotform-form" action="participantes" method="get" name="form"  accept-charset="utf-8">
+<form class="jotform-form" action="/Proyecto_Final_ElPoderdeUno/updateParticipante" method="POST" name="form"  accept-charset="utf-8">
   <input type="hidden" name="formID" value="73205363964863" />
+  <input type="hidden" name="idMatricula" value="${participante.idMatricula}" />
   <div class="form-all">
     <ul class="form-section page-section">
       <li id="cid_10" class="form-input-wide" data-type="control_head">
@@ -254,15 +255,15 @@ JotForm.paymentExtrasOnTheFly([null,null,null,null,null,null,null,null,null,{"na
         <div id="cid_15" class="form-input jf-required">
           <div data-wrapper-react="true">
             <span class="form-sub-label-container" style="vertical-align:top;">
-              <input type="text" id="first_15" value="Nombre" name="Nombre" class="form-textbox validate[required]" size="10" value="" data-component="first" required="" />
+              <input type="text" id="first_15" value="Nombre" name="Nombre" class="form-textbox validate[required]" size="10" value="${participante.nombre}" data-component="first" required="" />
               <label class="form-sub-label" for="first_15" id="sublabel_first" style="min-height:13px;"> Nombre </label>
             </span>
             <span class="form-sub-label-container" style="vertical-align:top;">
-              <input type="text" id="middle_15" name="ApellidoP" class="form-textbox" size="10" value="" data-component="middle" required="" />
+              <input type="text" id="middle_15" name="ApellidoP" class="form-textbox" size="10" value="${participante.apellidoP}" data-component="middle" required="required" />
               <label class="form-sub-label" for="middle_15" id="sublabel_middle" style="min-height:13px;"> Apellido Paterno </label>
             </span>
             <span class="form-sub-label-container" style="vertical-align:top;">
-              <input type="text" id="last_15" name="ApellidoM" class="form-textbox validate[required]" size="15" value="" data-component="last" required="" />
+              <input type="text" id="last_15" name="ApellidoM" class="form-textbox validate[required]" size="15" value="${participante.apellidoM}" data-component="last" required="" />
               <label class="form-sub-label" for="last_15" id="sublabel_last" style="min-height:13px;"> Apellido Materno </label>
             </span>
           </div>
@@ -276,7 +277,7 @@ JotForm.paymentExtrasOnTheFly([null,null,null,null,null,null,null,null,null,{"na
           </span>
         </label>
         <div id="cid_12" class="form-input jf-required">
-          <input type="email" id="input_12" name="Correo" class="form-textbox validate[required, Email]" size="40" value="" placeholder="ej: mynombre@ejemplo.com" data-component="email" required="" />
+          <input type="email" id="input_12" name="Correo" class="form-textbox validate[required, Email]" size="40" value="${participante.correo}" placeholder="ej: mynombre@ejemplo.com" data-component="email" required="" />
         </div>
       </li>
       <li class="form-line jf-required" data-type="control_number" id="id_16">
@@ -287,7 +288,7 @@ JotForm.paymentExtrasOnTheFly([null,null,null,null,null,null,null,null,null,{"na
           </span>
         </label>
         <div id="cid_16" class="form-input jf-required">
-          <input type="number" id="input_16" name="Edad" data-type="input-number" class=" form-number-input form-textbox validate[required]" style="width:60px;" size="5" value="" placeholder="ex: 23" data-component="number" required="" />
+          <input type="number" id="input_16" name="Edad" data-type="input-number" class=" form-number-input form-textbox validate[required]" style="width:60px;" size="5" value="${participante.edad}" placeholder="ex: 23" data-component="number" required="" />
         </div>
       </li>
       <li class="form-line jf-required" data-type="control_dropdown" id="id_17">
@@ -298,7 +299,7 @@ JotForm.paymentExtrasOnTheFly([null,null,null,null,null,null,null,null,null,{"na
           </span>
         </label>
         <div id="cid_17" class="form-input jf-required">
-          <select class="form-dropdown validate[required]" id="input_17" name="Genero" style="width:150px;" data-component="dropdown" required="">
+          <select class="form-dropdown validate[required]" id="input_17" name="Genero" style="width:150px;" value="${participante.genero}" data-component="dropdown" required="">
             <option value="">  </option>
             <option value="Femenino"> Femenino </option>
             <option value="Masculino"> Masculino </option>
@@ -322,7 +323,7 @@ JotForm.paymentExtrasOnTheFly([null,null,null,null,null,null,null,null,null,{"na
              <!--  <label class="form-sub-label" for="input_13_area" id="sublabel_area" style="min-height:13px;"> Cod. Area </label> -->
             </span>
             <span class="form-sub-label-container" style="vertical-align:top;">
-              <input type="tel" id="input_13_phone" name="Telefono" class="form-textbox validate[required]" size="20" value="" data-component="phone" required="" />
+              <input type="tel" id="input_13_phone" name="Telefono" class="form-textbox validate[required]" size="20" value="${participante.telefono}" data-component="phone" required="" />
               <label class="form-sub-label" for="input_13_phone" id="sublabel_phone" style="min-height:13px;"> Numero de tel. </label>
             </span>
           </div>
@@ -336,7 +337,7 @@ JotForm.paymentExtrasOnTheFly([null,null,null,null,null,null,null,null,null,{"na
           </span>
         </label>
         <div id="cid_18" class="form-input jf-required">
-          <select class="form-dropdown validate[required]" id="input_18" name="NivelEstudio" style="width:150px;" data-component="dropdown" required="">
+          <select class="form-dropdown validate[required]" id="input_18" value="${participante.nivelEstudio}" name="NivelEstudio" style="width:150px;" data-component="dropdown" required="">
             <option value="">  </option>
             <option value="Bachillerato"> Bachillerato </option>
             <option value="Licenciatura"> Licenciatura </option>
@@ -352,7 +353,7 @@ JotForm.paymentExtrasOnTheFly([null,null,null,null,null,null,null,null,null,{"na
           </span>
         </label>
         <div id="cid_18" class="form-input jf-required">
-          <select class="form-dropdown validate[required]" id="input_18" name="Proyectos" style="width:150px;" data-component="dropdown" required="">
+          <select class="form-dropdown validate[required]" id="input_18" value="${participante.proyecto}" name="Proyectos" style="width:150px;" data-component="dropdown" required="">
             <option value="">  </option>
             <option value="SinVotoNoHayDinero"> Sin Voto No Hay Dinero </option>
             <option value="Presidente2018"> Presidente 2018 </option>

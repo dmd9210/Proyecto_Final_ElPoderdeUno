@@ -26,37 +26,42 @@ import dataAccess.ParticipantesDAO;
 
 import model.Participante;
 
-
 /**
  *
  * @author usuario
  */
 @WebServlet("/updateParticipante")
-public class UpdateParticipante extends HttpServlet{
-	@Override 
-	public void doGet(HttpServletRequest request,
-		HttpServletResponse response)
-	throws ServletException, IOException {
-            response.setCharacterEncoding("utf-8");
-		
-               
-               String idMatricula=request.getParameter("idMatricula");
-               
-                //buscar usuario en base de datos
-		ConnectionDB connectionDB = new ConnectionDB();
-		Connection connection = 
-		connectionDB.getConnectionDB();
+public class UpdateParticipante extends HttpServlet {
 
-		
+    @Override
+    public void doGet(HttpServletRequest request,
+            HttpServletResponse response)
+            throws ServletException, IOException {
+        response.setCharacterEncoding("utf-8");
 
-		//Mandar llamar a la pagina
-		String address = "/WEB-INF/participaUpdate.html";
-		RequestDispatcher dispatcher = request.getRequestDispatcher(address);
-		dispatcher.forward(request,response);
-	}
-	public void doPost(HttpServletRequest request,
-		HttpServletResponse response)
-	throws ServletException, IOException {
-		doGet(request, response);
-	}
+        String idMatricula = request.getParameter("idMatricula");
+
+        //buscar usuario en base de datos
+        ConnectionDB connectionDB = new ConnectionDB();
+        Connection connection
+                = connectionDB.getConnectionDB();
+
+        ParticipantesDAO participantesDAO = new ParticipantesDAO(connection);
+
+        Participante participante = participantesDAO.getParticipante(idMatricula);
+
+        request.setAttribute("participante", participante);
+        //Mandar llamar a la pagina
+        String address = "/WEB-INF/participaUpdate.html";
+        RequestDispatcher dispatcher = request.getRequestDispatcher(address);
+        dispatcher.forward(request, response);
+    }
+
+    public void doPost(HttpServletRequest request,
+            HttpServletResponse response)
+            throws ServletException, IOException {
+            // obtener todos los parametros para el usuario del request
+            
+            // hacer un update usando todos los parametros del request, utiliza idMatricula como dientificador
+    }   
 }
