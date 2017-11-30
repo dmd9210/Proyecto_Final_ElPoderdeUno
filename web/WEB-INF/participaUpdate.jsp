@@ -1,3 +1,5 @@
+<!--  import packages and classes needed by scripts -->
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>       
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <html class="supernova"><head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -219,7 +221,6 @@ JotForm.paymentExtrasOnTheFly([null,null,null,null,null,null,null,null,null,{"na
 <body>
 <form class="jotform-form" action="/Proyecto_Final_ElPoderdeUno/updateParticipante" method="POST" name="form"  accept-charset="utf-8">
   <input type="hidden" name="formID" value="73205363964863" />
-  <input type="hidden" name="idMatricula" value="${participante.idMatricula}" />
   <div class="form-all">
     <ul class="form-section page-section">
       <li id="cid_10" class="form-input-wide" data-type="control_head">
@@ -242,7 +243,7 @@ JotForm.paymentExtrasOnTheFly([null,null,null,null,null,null,null,null,null,{"na
           </span>
         </label>
         <div id="cid_14" class="form-input jf-required">
-          <input type="text" id="input_14" name="idMatricula" data-type="input-textbox" class="form-textbox validate[required]" size="20" value="" data-component="textbox" required="" />
+          <input type="text" id="input_14" name="idMatricula" data-type="input-textbox" class="form-textbox validate[required]" size="20" value="${participante.idMatricula}" data-component="textbox" required="" />
         </div>
       </li>
       <li class="form-line jf-required" data-type="control_fullname" id="id_15">
@@ -300,9 +301,8 @@ JotForm.paymentExtrasOnTheFly([null,null,null,null,null,null,null,null,null,{"na
         </label>
         <div id="cid_17" class="form-input jf-required">
           <select class="form-dropdown validate[required]" id="input_17" name="Genero" style="width:150px;" value="${participante.genero}" data-component="dropdown" required="">
-            <option value="">  </option>
-            <option value="Femenino"> Femenino </option>
-            <option value="Masculino"> Masculino </option>
+            <option ${ participante.genero == "Femenino" ? 'selected="selected"' : '' } value="Femenino"> Femenino </option>
+            <option ${ participante.genero == "Masculino" ? 'selected="selected"' : '' } value="Masculino"> Masculino </option>
           </select>
         </div>
       </li>
@@ -338,11 +338,10 @@ JotForm.paymentExtrasOnTheFly([null,null,null,null,null,null,null,null,null,{"na
         </label>
         <div id="cid_18" class="form-input jf-required">
           <select class="form-dropdown validate[required]" id="input_18" value="${participante.nivelEstudio}" name="NivelEstudio" style="width:150px;" data-component="dropdown" required="">
-            <option value="">  </option>
-            <option value="Bachillerato"> Bachillerato </option>
-            <option value="Licenciatura"> Licenciatura </option>
-            <option value="Maestría"> Maestría </option>
-            <option value="Doctorado"> Doctorado </option>
+            <option value="Bachillerato" ${ participante.nivelEstudio == 'Bachillerato' ? 'selected="selected"' : '' }> Bachillerato </option>
+            <option value="Licenciatura" ${ participante.nivelEstudio == 'Licenciatura' ? 'selected="selected"' : '' }> Licenciatura </option>
+            <option value="Maestria" ${ participante.nivelEstudio == 'Maestria' ? 'selected="selected"' : '' }> Maestria </option>
+            <option value="Doctorado" ${ participante.nivelEstudio == 'Doctorado' ? 'selected="selected"' : '' }> Doctorado </option>
           </select>
         </div>
         <li class="form-line jf-required" data-type="control_dropdown" id="id_18">
@@ -354,11 +353,10 @@ JotForm.paymentExtrasOnTheFly([null,null,null,null,null,null,null,null,null,{"na
         </label>
         <div id="cid_18" class="form-input jf-required">
           <select class="form-dropdown validate[required]" id="input_18" value="${participante.proyecto}" name="Proyectos" style="width:150px;" data-component="dropdown" required="">
-            <option value="">  </option>
-            <option value="SinVotoNoHayDinero"> Sin Voto No Hay Dinero </option>
-            <option value="Presidente2018"> Presidente 2018 </option>
-            <option value="ComoVamosTorreon"> Como Vamos Torreon </option>
-            <option value="LagunaLimpia"> Laguna Limpia </option>
+            <option value="Sin Voto No Hay Dinero" ${ participante.proyecto == 'SinVotoNoHayDinero' ? 'selected="selected"' : '' }> Sin Voto No Hay Dinero </option>
+            <option value="Presidente 2018" ${ participante.proyecto == 'Presidente2018' ? 'selected="selected"' : '' }> Presidente 2018 </option>
+            <option value="Como Vamos Torreon" ${ participante.proyecto == 'ComoVamosTorreon' ? 'selected="selected"' : '' }> Como Vamos Torreon </option>
+            <option value="Laguna Limpia" ${ participante.proyecto == 'LagunaLimpia' ? 'selected="selected"' : '' }> Laguna Limpia </option>
           </select>
         </div>   
         </li>

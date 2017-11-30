@@ -133,19 +133,21 @@ public class ParticipantesDAO {
                     = connection.prepareStatement("SELECT * FROM participante WHERE idMatricula=?;");
             synchronized (statement) {
                 statement.setString(1, matricula);
-                statement.executeUpdate();
+                statement.executeQuery();
                 ResultSet results = statement.executeQuery();
 
-                participante.setIdMatricula(results.getString("idMatricula"));
-                participante.setNombre(results.getString("Nombre"));
-                participante.setApellidoP(results.getString("ApellidoP"));
-                participante.setApellidoM(results.getString("ApellidoM"));
-                participante.setCorreo(results.getString("Correo"));
-                participante.setEdad(results.getString("Edad"));
-                participante.setGenero(results.getString("Genero"));
-                participante.setTelefono(results.getString("Telefono"));
-                participante.setNivelEstudio(results.getString("NivelEstudio"));
-                participante.setProyecto(results.getString("Proyecto"));
+                while (results.next()) {
+                    participante.setIdMatricula(results.getString("idMatricula"));
+                    participante.setNombre(results.getString("Nombre"));
+                    participante.setApellidoP(results.getString("ApellidoP"));
+                    participante.setApellidoM(results.getString("ApellidoM"));
+                    participante.setCorreo(results.getString("Correo"));
+                    participante.setEdad(results.getString("Edad"));
+                    participante.setGenero(results.getString("Genero"));
+                    participante.setTelefono(results.getString("Telefono"));
+                    participante.setNivelEstudio(results.getString("NivelEstudio"));
+                    participante.setProyecto(results.getString("Proyecto"));
+                }
 
             }
             statement.close();

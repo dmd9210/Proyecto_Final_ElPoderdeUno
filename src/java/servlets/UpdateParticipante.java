@@ -52,7 +52,7 @@ public class UpdateParticipante extends HttpServlet {
 
         request.setAttribute("participante", participante);
         //Mandar llamar a la pagina
-        String address = "/WEB-INF/participaUpdate.html";
+        String address = "/WEB-INF/participaUpdate.jsp";
         RequestDispatcher dispatcher = request.getRequestDispatcher(address);
         dispatcher.forward(request, response);
     }
