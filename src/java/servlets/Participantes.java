@@ -42,8 +42,6 @@ public class Participantes extends HttpServlet {
         ParticipantesDAO participantesDAO = new ParticipantesDAO(connection);
         participantesDAO.addParticipantes(participante);
 
-        participantesDAO.updateParticipantes(participante);
-
         //Guardar instancia en objeto request para usarse por jsp
         request.setAttribute("participante", participante);
 
