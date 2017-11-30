@@ -60,8 +60,24 @@ public class UpdateParticipante extends HttpServlet {
     public void doPost(HttpServletRequest request,
             HttpServletResponse response)
             throws ServletException, IOException {
-            // obtener todos los parametros para el usuario del request
-            
-            // hacer un update usando todos los parametros del request, utiliza idMatricula como dientificador
-    }   
+        // obtener todos los parametros para el usuario del request
+        ConnectionDB connectionDB = new ConnectionDB();
+        Connection connection
+                = connectionDB.getConnectionDB();
+
+        ParticipantesDAO participantesDAO = new ParticipantesDAO(connection);
+        Participante participante = new Participante();
+        participante.setIdMatricula(request.getParameter("idMatricula"));
+        participante.setNombre(request.getParameter("Nombre"));
+        participante.setApellidoP(request.getParameter("ApellidoP"));
+        participante.setApellidoM(request.getParameter("ApellidoM"));
+        participante.setCorreo(request.getParameter("Correo"));
+        participante.setEdad(request.getParameter("Edad"));
+        participante.setGenero(request.getParameter("Genero"));
+        participante.setTelefono(request.getParameter("Telefono"));
+        participante.setNivelEstudio(request.getParameter("NivelEstudio"));
+        participante.setProyecto(request.getParameter("Proyecto"));
+        participantesDAO.updateParticipante(participante);
+        response.sendRedirect("/Proyecto_Final_ElPoderdeUno/displayAllParticipante");
+    }
 }

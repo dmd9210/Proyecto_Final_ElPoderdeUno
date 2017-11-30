@@ -256,7 +256,7 @@ JotForm.paymentExtrasOnTheFly([null,null,null,null,null,null,null,null,null,{"na
         <div id="cid_15" class="form-input jf-required">
           <div data-wrapper-react="true">
             <span class="form-sub-label-container" style="vertical-align:top;">
-              <input type="text" id="first_15" value="Nombre" name="Nombre" class="form-textbox validate[required]" size="10" value="${participante.nombre}" data-component="first" required="" />
+              <input type="text" id="first_15" name="Nombre" class="form-textbox validate[required]" size="10" value="${participante.nombre}" data-component="first" required="" />
               <label class="form-sub-label" for="first_15" id="sublabel_first" style="min-height:13px;"> Nombre </label>
             </span>
             <span class="form-sub-label-container" style="vertical-align:top;">
@@ -318,7 +318,6 @@ JotForm.paymentExtrasOnTheFly([null,null,null,null,null,null,null,null,null,{"na
             <span class="form-sub-label-container" style="vertical-align:top;">
               <!-- <input type="tel" id="input_13_area" name="q13_numeroDe[area]" class="form-textbox validate[required]" size="3" value="" data-component="areaCode" required="" /> -->
               <span class="phone-separate">
-                 
               </span>
              <!--  <label class="form-sub-label" for="input_13_area" id="sublabel_area" style="min-height:13px;"> Cod. Area </label> -->
             </span>
