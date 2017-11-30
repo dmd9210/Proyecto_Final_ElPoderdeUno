@@ -124,7 +124,23 @@ public class ParticipantesDAO {
             throw new RuntimeException(sqle);
         }
     }
-
+    
+    public void deleteParticipante(String idMatricula) {
+        try {
+            statement
+                    = connection.prepareStatement("DELETE FROM elpoderdeuno.participante WHERE idMatricula=?;");
+            synchronized (statement) {
+                statement.setString(1, idMatricula);
+                statement.executeUpdate();
+            }
+            statement.close();
+        } catch (SQLException sqle) {
+            logger.log(Level.SEVERE,
+                    sqle.toString(), sqle);
+            throw new RuntimeException(sqle);
+        }
+    }
+    
     public Participante getParticipante(String matricula) {
         Participante participante = new Participante();
 

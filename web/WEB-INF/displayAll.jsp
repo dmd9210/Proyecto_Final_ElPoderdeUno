@@ -57,7 +57,10 @@
                         <td>${participantesElement.telefono}</td>
                         <td>${participantesElement.nivelEstudio}</td>
                         <td>${participantesElement.proyecto}</td>
-                       <td><li><a href="/Proyecto_Final_ElPoderdeUno/updateParticipante?idMatricula=${participantesElement.idMatricula}"> Actualizar</a></li></td>
+                        <td>
+                            <a href="/Proyecto_Final_ElPoderdeUno/updateParticipante?idMatricula=${participantesElement.idMatricula}"> Actualizar</a>
+                            <a href="/Proyecto_Final_ElPoderdeUno/deleteParticipante?idMatricula=${participantesElement.idMatricula}"> Borrar</a>
+                        </td>
         </tr>
     </c:forEach>  
 </tbody>
