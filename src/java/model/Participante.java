@@ -10,28 +10,27 @@ package model;
  * @author Diego
  */
 public class Participante {
-    
-    private String idMatricula,nombre,apellidoP,apellidoM,correo,edad,genero,telefono,nivelEstudio,proyecto;
-   
 
-    
+    private String idMatricula, nombre, apellidoP, apellidoM, correo, edad, genero, telefono, nivelEstudio, proyecto;
+
     public Participante() {
 
-}
-
-    public Participante(String idMatricula, String nombre, String apellidoP,String apellidoM,String correo,String edad,String genero,String telefono,String nivelEstudio,String proyecto){
-    
-        this.idMatricula=idMatricula;
-        this.nombre=nombre;
-        this.apellidoP=apellidoP;
-        this.apellidoM=apellidoM;
-        this.correo=correo;
-        this.edad=edad;
-        this.genero=genero;
-        this.telefono=telefono;
-        this.nivelEstudio=nivelEstudio;
-        this.proyecto=proyecto;
     }
+
+    public Participante(String idMatricula, String nombre, String apellidoP, String apellidoM, String correo, String edad, String genero, String telefono, String nivelEstudio, String proyecto) {
+
+        this.idMatricula = idMatricula;
+        this.nombre = nombre;
+        this.apellidoP = apellidoP;
+        this.apellidoM = apellidoM;
+        this.correo = correo;
+        this.edad = edad;
+        this.genero = genero;
+        this.telefono = telefono;
+        this.nivelEstudio = nivelEstudio;
+        this.proyecto = proyecto;
+    }
+
     public String getidMatricula() {
         return idMatricula;
     }
@@ -67,8 +66,8 @@ public class Participante {
     public String getNivelEstudio() {
         return nivelEstudio;
     }
-    
-    public String getProyecto(){
+
+    public String getProyecto() {
         return proyecto;
     }
 
@@ -107,12 +106,10 @@ public class Participante {
     public void setNivelEstudio(String nivelEstudio) {
         this.nivelEstudio = nivelEstudio;
     }
-    
-    public void setProyecto(String proyecto){
-    
+
+    public void setProyecto(String proyecto) {
+
         this.proyecto = proyecto;
     }
 
-    
-    
 }

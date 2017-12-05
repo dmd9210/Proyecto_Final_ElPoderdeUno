@@ -352,10 +352,9 @@ JotForm.paymentExtrasOnTheFly([null,null,null,null,null,null,null,null,null,{"na
         </label>
         <div id="cid_18" class="form-input jf-required">
           <select class="form-dropdown validate[required]" id="input_18" value="${participante.proyecto}" name="Proyecto" style="width:150px;" data-component="dropdown" required="">
-            <option value="Sin Voto No Hay Dinero" ${ participante.proyecto == 'SinVotoNoHayDinero' ? 'selected="selected"' : '' }> Sin Voto No Hay Dinero </option>
-            <option value="Presidente 2018" ${ participante.proyecto == 'Presidente2018' ? 'selected="selected"' : '' }> Presidente 2018 </option>
-            <option value="Como Vamos Torreon" ${ participante.proyecto == 'ComoVamosTorreon' ? 'selected="selected"' : '' }> Como Vamos Torreon </option>
-            <option value="Laguna Limpia" ${ participante.proyecto == 'LagunaLimpia' ? 'selected="selected"' : '' }> Laguna Limpia </option>
+            <c:forEach items="${projectosList}" var="proyecto">
+                <option value="${ proyecto.getId() }">${ proyecto.getNombre() }</option>
+            </c:forEach>
           </select>
         </div>   
         </li>

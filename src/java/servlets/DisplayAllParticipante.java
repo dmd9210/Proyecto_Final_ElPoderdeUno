@@ -23,7 +23,8 @@ import javax.servlet.http.*;
 
 import dataAccess.ConnectionDB;
 import dataAccess.ParticipantesDAO;
-
+import dataAccess.ProyectosDAO;
+import model.Proyecto;
 import model.Participante;
 
 
@@ -44,11 +45,14 @@ public class DisplayAllParticipante extends HttpServlet{
 		connectionDB.getConnectionDB();
 
 		ParticipantesDAO participantesDAO = new ParticipantesDAO(connection);
+		ProyectosDAO proyectosDAO = new ProyectosDAO(connection);
 		ArrayList<Participante> participantesList = participantesDAO.getparticipantesList();
+		ArrayList<Proyecto> proyectosList = proyectosDAO.getProyectosList();
 
 		//guardar instancia
 
 		request.setAttribute("ParticipantesList", participantesList);
+		request.setAttribute("proyectosList", proyectosList);
 
 		//Mandar llamar a la pagina
 		String address = "displayAllParticipante";
